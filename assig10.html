@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="./images/bookmark.png">
+    <link rel="shortcut icon" href="./images/" type="image/x-icon">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/assig10.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+<body class="py-5">
+    <div class="container d-flex justifiy-content-center align-items-center flex-column">
+        <h1 class="py-2 position-relative">Bookmarker</h1>
+        <div class="bookmark-body mt-5 p-3 py-4 w-100 d-flex justifiy-content-center align-items-center flex-column gap-4">
+            <h2><i class="fa-solid fa-bookmark pe-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark px-2"></i></h2>
+            <div class="site-name w-100 d-flex justifiy-content-center flex-column ">
+                <label for="BookmarkName" class="pb-2 main-font"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+                <input type="text" oninput="nameValid(this.value)"  class="form-control  main-font" id="BookmarkName" placeholder="Bookmark Name">
+            </div>
+            <div class="site-url  w-100 d-flex justifiy-content-center flex-column">
+                <label for="BookmarkUrl" class="pb-2 main-font"> <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                <input type="url" oninput="urlValid(this.value)" class="form-control  main-font" id="BookmarkUrl" placeholder="Website URL">
+            </div>
+            <button id="submitBtn" onclick="addSite()" class="btn-submit main-font">Submit</button>
+        </div>
+        <table class="table mt-4 text-center bg-light main-font">
+            <thead>
+                <tr>
+                    <th >Index</th>
+                    <th class="text-capitalize">Website name</th>
+                    <th >Visit</th>
+                    <th >Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableContent" class="main-font">
+            </tbody>
+        </table>     
+    </div>
+    <div class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+        <div class="box-content bg-white p-4 rounded-2 shadow-lg">
+            <div class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+                <div class="circles d-flex">
+                    <span class="rounded-circle circle-1 me-2"></span>
+                    <span class="rounded-circle circle-2 me-2"></span>
+                    <span class="rounded-circle circle-3 me-2"></span>
+                </div>
+                <button class="btn border-0" id="close-Btn">
+                    <i class="fa-solid fa-xmark close fs-3"></i>
+                </button>
+            </div>
+            <p class="m-0 pb-2"> Site Name or Url is not valid, Please follow the rules below :</p>
+            <ol class="rules list-unstyled m-0">
+                <li class="main-font"><i class="fa-regular fa-circle-right p-2"></i>Site name must contain at least 3 characters</li>
+                <li class="main-font"><i class="fa-regular fa-circle-right p-2"></i>Site URL must be a valid one</li>
+            </ol>
+        </div>
+    </div> 
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/assig10.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- <div
+class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none"
+>
+<div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+  <header
+    class="box-header w-100 d-flex justify-content-between align-items-center mb-4"
+  >
+    <div class="circles d-flex">
+      <span class="rounded-circle me-2"></span>
+      <span class="rounded-circle me-2"></span>
+      <span class="rounded-circle me-2"></span>
+    </div>
+    <button class="btn border-0" id="closeBtn">
+      <i class="fa-solid fa-xmark close fs-3"></i>
+    </button>
+  </header>
+  <p class="m-0 pb-2">
+    Site Name or Url is not valid, Please follow the rules below :
+  </p>
+  <ol class="rules list-unstyled m-0">
+    <li>
+      <i class="fa-regular fa-circle-right p-2"></i>Site name must
+      contain at least 3 characters
+    </li>
+    <li>
+      <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+      valid one
+    </li>
+  </ol>
+</div>
+</div> -->
+
